@@ -14,6 +14,10 @@ public class TicketOffice {
         this.tickets = tickets;
     }
 
+    public void sellTicketTo(Audience audience) {
+        plusAmount(audience.buy(getTicket()));
+    }
+
     public Ticket getTicket() {
         return tickets.remove(0);
     }
